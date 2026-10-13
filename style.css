@@ -1,0 +1,133 @@
+/*
+Theme Name: Nexa Classic
+Theme URI: https://github.com/Samiullah-Popalzai/nexa-classic-wordpress-theme
+Author: Samiullah Popalzai
+Author URI: https://samiullah-popalzai.github.io/
+Description: A lightweight, reusable classic WordPress theme built for clean, flexible, and responsive websites.
+Version: 1.0.0
+Text Domain: nexa-classic
+*/
+
+/* Design Tokens */
+:root {
+  --nexa-primary: #2563eb;
+  --nexa-text: #1f2937;
+  --nexa-muted: #6b7280;
+  --nexa-background: #0057ad;
+  --nexa-surface: #ffffff;
+  --nexa-border: #e5e7eb;
+
+  --nexa-container: 1120px;
+  --nexa-radius: 8px;
+}
+
+/* Base */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--nexa-background);
+  color: var(--nexa-text);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  color: var(--nexa-primary);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.container {
+  width: min(100% - 40px, var(--nexa-container));
+  margin-inline: auto;
+}
+
+/* Header */
+.site-header {
+  background: var(--nexa-surface);
+  border-bottom: 1px solid var(--nexa-border);
+  padding: 20px 0;
+}
+
+.site-title {
+  color: var(--nexa-text);
+  font-size: 24px;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+}
+
+.site-title:hover {
+  text-decoration: none;
+}
+
+/* Main Content */
+main {
+  min-height: 60vh;
+  padding-block: 48px;
+}
+
+article {
+  margin-bottom: 32px;
+  padding: 32px;
+  background: var(--nexa-surface);
+  border: 1px solid var(--nexa-border);
+  border-radius: var(--nexa-radius);
+}
+
+article h1,
+article h2 {
+  line-height: 1.25;
+}
+
+article h1 {
+  margin-top: 0;
+  font-size: clamp(28px, 4vw, 38px);
+}
+
+article p {
+  color: var(--nexa-muted);
+}
+
+article a {
+  font-weight: 600;
+}
+
+/* Footer */
+.site-footer {
+  background: var(--nexa-surface);
+  border-top: 1px solid var(--nexa-border);
+  text-align: center;
+}
+
+.site-footer p {
+  margin: 0;
+  color: var(--nexa-muted);
+  font-size: 14px;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .container {
+    width: min(100% - 28px, var(--nexa-container));
+  }
+
+  main {
+    padding-block: 28px;
+  }
+
+  article {
+    padding: 22px;
+  }
+}
